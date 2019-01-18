@@ -164,20 +164,34 @@
                 <label for="monthList">Expiration Date</label>
                 <select name="cardMonth" id="monthList" required>
                     <option value="">--Month--</option>
-                    <option value="">January (01)</option>
-                    <option value="">February (02)</option>
-                    <option value="">March (03)</option>
-                    <option value="">April (04)</option>
-                    <option value="">May(05)</option>
-                    <option value="">June (06)</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="Jan">January (01)</option>
+                    <option value="Feb">February (02)</option>
+                    <option value="Mar">March (03)</option>
+                    <option value="Apr">April (04)</option>
+                    <option value="May">May(05)</option>
+                    <option value="June">June (06)</option>
+                    <option value="July">July (07)</option>
+                    <option value="Aug">August (08)</option>
+                    <option value="Sept">September (09)</option>
+                    <option value="Oct">October (10)</option>
+                    <option value="Nov">November (11)</option>
+                    <option value="Dec">December (12)</option>
                 </select>
+                <select name="cardYear" id="yearList" required>
+                    <option value="">--Year--</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+                <label for="cscBox">CSC</label>
+                <input type="text" id="cscBox" name="csc" pattern="^\d{3}$" maxlength="3" placeholder="nnn" />
             </fieldset>
+
+            <button type="submit">
+                <img src="sb_button.png" alt="next" />
+            </button>
         </form>
 
 

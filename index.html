@@ -49,27 +49,49 @@
 
     <section>
         <h1>Payment Form</h1>
+        <!-- This sets a form element with an action a certain url and method which is post. -->
         <form action=" http://www.example.com/sb/payment" id="payment" method="post">
 
             <fieldset id="billing">
+                <!-- This sets basically like a header inside the fieldset for the payment form in the rendered page. -->
                 <legend>Billing Information (required)</legend>
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="fName">First Name</label>
+                <!-- The input element sets a textbox that you can type in, the required value sets it so you have to put in text or else you cannot submit the form, this code also has a specific fieldset and id.. -->
                 <input type="text" id="firstBox" name="fName" required />
 
+
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="lName">Last Name</label>
+                <!-- The input element sets a textbox that you can type in, the required value sets it so you have to put in text or else you cannot submit the form, this code also has a specific fieldset and id.. -->
                 <input type="text" id="lastBox" name="lName" required />
 
+
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="street">Street Address</label>
+                <!-- The input element sets a textbox that you can type in, the required value sets it so you have to put in text or else you cannot submit the form, this code also has a specific fieldset and id.. -->
                 <input type="text" id="streetBox" name="street" required />
 
+
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="street2">Street Address (2)</label>
+                <!-- The input element sets a textbox that you can type in, this code also has a specific fieldset and id. -->
                 <input type="text" id="streetBox2" name="street2" />
 
+
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="city">City</label>
+                <!-- The input element sets a textbox that you can type in, the required value sets it so you have to put in text or else you cannot submit the form, this code also has a specific fieldset and id.. -->
                 <input type="text" id="cityBox" name="city" required />
 
+
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="state">State</label>
+                <!-- The input element sets a textbox that you can type in, the required value sets it so you have to put in text or else you cannot submit the form, this code also has a specific fieldset and id.. -->
                 <input type="text" id="stateBox" name="state" list="stateList" required />
+                <!-- The datalist element sets a list in the input box and the option elements makes different options on the scroll bar 
+                that the user is able to click on. The value attribute makes it so that certain value shows up on the scroll bar when you
+            press on it.  -->
                 <datalist id="stateList">
                     <option value="AL" />
                     <option value="AK" />
@@ -122,45 +144,65 @@
                     <option value="WI" />
                     <option value="WY" />
                 </datalist>
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="zip">ZIP/Postal Code</label>
+                <!-- The input element sets a textbox that you can type in, this code also has a specific fieldset and id. -->
                 <input type="text" id="zipBox" name="zip" pattern="^\d{5}(-\d{4})?$" />
 
+
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="country">Country</label>
+                <!-- The input element sets a textbox that you can type in, the required value sets it so you have to put in text or else you cannot submit the form, this code also has a specific fieldset and id.. -->
                 <input type="text" id="countryBox" name="country" value="United States" required />
 
+
+                <!-- The label element sets a label for the input box, so whatever text you put in for the label element shows up before the box where you input text. -->
                 <label for="phone">Phone</label>
+                <!-- The input element sets a textbox that you can type in, the required value sets it so you have to put in text or else you cannot submit the form, this code also has a specific fieldset and id.. -->
                 <input type="tel" id="phoneBox" name="phone" pattern=" ^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
                     required />
 
             </fieldset>
-
+            <!-- This code has fieldset that share a common purpose with an id of creditcard. -->
             <fieldset id="creditCard">
 
                 <legend>Credit Card (required)</legend>
                 <fieldset>
+                    <!-- This code has label with a class of cardLabel with an association of cCard. In the label theres an input with a type
+                    of radio, the radio value sets a dot that you can click on instead of a textbox. The image element has a src attribute with 
+                a certain png that shows up right after the dot on the rendered page.-->
                     <label class="cardLabel" for="cCard">
                         <input type="radio" id="amex" required />
                         <img src="sb_amex.png" id="amex" />
                     </label>
-
+                    <!-- This code has label with a class of cardLabel with an association of cCard. In the label theres an input with a type
+                    of radio, the radio value sets a dot that you can click on instead of a textbox. The image element has a src attribute with 
+                a certain png that shows up right after the dot on the rendered page. -->
                     <label class="cardLabel" for="cCard">
-                        <input type="radio" id="discoverequiredr" />
+                        <input type="radio" id="discover" required/>
                         <img src="sb_discover.png" id="discover" />
                     </label>
-
+                    <!-- This code has label with a class of cardLabel with an association of cCard. In the label theres an input with a type
+                    of radio, the radio value sets a dot that you can click on instead of a textbox. The image element has a src attribute with 
+                a certain png that shows up right after the dot on the rendered page. -->
                     <label class="cardLabel" for="cCard">
                         <input type="radio" id="master" required />
                         <img src="sb_master.png" id="master" />
                     </label>
-
+                    <!-- This code has label with a class of cardLabel with an association of cCard. In the label theres an input with a type
+                    of radio, the radio value sets a dot that you can click on instead of a textbox. The image element has a src attribute with 
+                a certain png that shows up right after the dot on the rendered page. -->
                     <label class="cardLabel" for="cCard">
                         <input type="radio" id="visa" required />
                         <img src="sb_visa.png" id="visa" />
                     </label>
                 </fieldset>
+                <!-- This set of code has a label with Credit Card Number and an input for the credit card number. The pattern element 
+                validates a text value against a regular expression. -->
                 <label for="cardBox">Credit Card Number</label>
                 <input type="text" id="cardBox" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
-
+                    <!-- This code has a label of Expiration Date and a selection list that is required. The option values have text in them 
+                    that the user is able to select when they're in the rendered page. -->
                 <label for="monthList">Expiration Date</label>
                 <select name="cardMonth" id="monthList" required>
                     <option value="">--Month--</option>
@@ -185,10 +227,14 @@
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
                 </select>
+                <!-- This code adds another textbox that has a certain pattern to make sure its validated and the maxlength attribute is the
+                amount of characters the user can type into the textbox. The placeholder is text that gives an example of what the user should put
+            in the textbox. -->
                 <label for="cscBox">CSC</label>
                 <input type="text" id="cscBox" name="csc" pattern="^\d{3}$" maxlength="3" placeholder="nnn" />
             </fieldset>
-
+            <!-- The button element submits the form to a program running on the web server. Inside it theres an image with a certain source
+            and alternate text "next". -->
             <button type="submit">
                 <img src="sb_button.png" alt="next" />
             </button>
